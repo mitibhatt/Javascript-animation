@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+   <h1 id="heading">Pragraph</h1>
+        </td>
+
+        <td><button onclick="move()">Start</button></td>
+           <td> <button onclick="stop()">Stop</button></td>
+           <td> <button onclick="reset()">Reset</button>
+        </td>
+        <td><input type="checkbox" id="chkHrz">Move Horizontal</td>
+    </tr>
+
+
+</table>
+<script type="text/javascript">
+    <!--
+    var TxtHead = null;
+    var animate ;
+    var chk = document.getElementById('chkHrz');
+
+    function init(){
+        TxtHead = document.getElementById('heading');
+        TxtHead.style.position= 'relative';
+        TxtHead.style.left = '0px';
+        TxtHead.style.top = '0px';
+    }
+
+    function move(){
+
+        if(chk.checked == true)
+        {
+            TxtHead.style.left = parseInt(TxtHead.style.left) + 10 + 'px';
+        animate = setTimeout(move,20); // call moveRight in 20msec
+        }
+        else
+        {
+            TxtHead.style.top = parseInt(TxtHead.style.top) + 10 + 'px';
+            animate = setTimeout(move,20); // call moveRight in 20msec
+        }
+    }
+
+    function stop(){
+        clearTimeout(animate);
+        //imgObj.style.left = '0px';
+    }
+function reset()
+{
+    if(chk.checked == true) {
+    clearTimeout(animate);
+    TxtHead.style.left = '0px';
+}
+else
+    {
+        clearTimeout(animate);
+        TxtHead.style.top = '0px';
+    }
+
+}
+
+    window.onload =init;
+    //-->
+</script>
+</body>
+</html>
